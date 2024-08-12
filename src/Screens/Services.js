@@ -11,15 +11,9 @@ const services = [
     icon: faBrain,
     iconColor: "#827054",
     details: [
-      {
-        title: "- Atención psicológica individual",
-      },
-      {
-        title: "- Atención psicológica niños",
-      },
-      {
-        title: "- Atención psicológica adolescentes",
-      }
+      { title: "Atención psicológica individual" },
+      { title: "Atención psicológica niños" },
+      { title: "Atención psicológica adolescentes" },
     ]
   },
   {
@@ -27,9 +21,7 @@ const services = [
     icon: faDesktop,
     iconColor: "#827054",
     details: [
-      {
-        title: "Sesiones de terapia en línea",
-      }
+      { title: "Sesiones de terapia en línea" },
     ]
   },
   {
@@ -37,12 +29,8 @@ const services = [
     icon: faUsers,
     iconColor: "#827054",
     details: [
-      {
-        title: "- Formación para familias",
-      },
-      {
-        title: "- Formación para empresas",
-      }
+      { title: "Formación para familias" },
+      { title: "Formación para empresas" },
     ]
   },
 ];
@@ -79,21 +67,14 @@ const Services = () => {
                     <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-gray-500`} />
                   </Disclosure.Button>
                   <Disclosure.Panel className="pt-4 text-lg text-gray-600">
-                    {/* <ul className="list-disc pl-5 space-y-2">
-                      {service.description.map((desc, index) => (
-                        <li key={index} className={`text-3xl ${styles['fontFamily-MyFont3']}`}>
-                          <span className="ml-2">{desc.text}</span>
-                        </li>
-                      ))}
-                    </ul> */}
-                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex flex-col space-y-4">
                       {service.details.map((detail, index) => (
-                        <div key={index} className={styles.serviceContainer}>
-                          {detail.image && (
-                            <img src={detail.image} alt={detail.title} className={styles.webImage} />
-                          )}
-                          <p className={`text-4xl font-medium ${styles['fontFamily-MyFont3']} ${styles.serviceDetailTitle}`}>{detail.title}</p>
-                        </div>
+                        <button
+                          key={index}
+                          className={`bg-yellow-500 hover:bg-yellow-600 text-white text-4xl font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${styles['fontFamily-MyFont3']}`}
+                        >
+                          {detail.title}
+                        </button>
                       ))}
                     </div>
                   </Disclosure.Panel>

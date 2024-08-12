@@ -1,61 +1,116 @@
 @font-face {
-     font-family: 'MyFont1';
-     src: url('./assets/fonts/losta-masta-medium.ttf') format('truetype');
-   }
-   
-   .fontFamily-MyFont1 {
-     font-family: 'MyFont1', sans-serif;
-   }
-   
-   @font-face {
-     font-family: 'MyFont2';
-     src: url('./assets/fonts/moon-bold.otf') format('opentype');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   .fontFamily-MyFont2 {
-     font-family: 'MyFont2', sans-serif;
-   }
-   
-   @font-face {
-     font-family: 'MyFont3';
-     src: url('./assets/fonts/Daily\ Challenge\ DEMO.otf') format('opentype');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   .fontFamily-MyFont3 {
-     font-family: 'MyFont3', sans-serif;
-   }
+  font-family: 'MyFont1';
+  src: url('./assets/fonts/losta-masta-medium.ttf') format('truetype');
+}
 
-   .serviceTitle {
-    text-align: center;
-    display: block;
-    width: 100%;
+.fontFamily-MyFont1 {
+  font-family: 'MyFont1', sans-serif;
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('./assets/fonts/moon-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fontFamily-MyFont2 {
+  font-family: 'MyFont2', sans-serif;
+}
+
+@font-face {
+  font-family: 'MyFont3';
+  src: url('./assets/fonts/Daily\ Challenge\ DEMO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fontFamily-MyFont3 {
+  font-family: 'MyFont3', sans-serif;
+}
+
+.serviceTitle {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.serviceContainer {
+  transition: all 0.3s ease;
+}
+
+.serviceContainer:hover {
+  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+  border: 2px solid #4a90e2; /* Color del borde al pasar el mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+  border-radius: 10px; /* Radio de borde si quieres bordes redondeados */
+}
+
+.bg-green {
+  background-color: #d1e7dd; /* Ajusta el color de fondo según tu diseño */
+}
+
+.btnGradient {
+  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+  color: white; /* Color del texto */
+  transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el fondo y el tamaño */
+}
+
+.btnGradient:hover {
+  background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+  transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
+}
+
+/* Estilos responsivos */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 0 10px;
   }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .serviceContainer {
-    transition: all 0.3s ease;
-  }
-  
-  .serviceContainer:hover {
-    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
-    border: 2px solid #4a90e2; /* Color del borde al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
-    border-radius: 10px; /* Radio de borde si quieres bordes redondeados */
-  }
-  
-  .bg-green {
-    background-color: #d1e7dd; /* Ajusta el color de fondo según tu diseño */
+    padding: 10px;
+    margin: 10px 0;
   }
   
   .btnGradient {
-    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
-    color: white; /* Color del texto */
-    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el fondo y el tamaño */
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 0 5px;
   }
   
-  .btnGradient:hover {
-    background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
-    transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
+  nav {
+    display: none; /* Ejemplo de ajuste para un menú colapsable */
   }
+  
+  .serviceContainer {
+    padding: 8px;
+    margin: 8px 0;
+  }
+  
+  .btnGradient {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

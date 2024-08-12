@@ -1,7 +1,11 @@
 import React from "react";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa los estilos predeterminados del carrusel
 import background1 from '../assets/background1.jpg';
 import paragraphImage from '../assets/IMG_0134.jpg';
-import girasolIcon from '../assets/girasol.png'; // Asegúrate de tener esta imagen en tu carpeta de assets
+import additionalImage1 from '../assets/IMG_0136.jpg'; // Asegúrate de tener esta imagen en tu carpeta de assets
+import additionalImage2 from '../assets/IMG_0135.jpg';
+import girasolIcon from '../assets/girasol.png';
 import './Us.css';
 import styles from '../App.module.css';
 
@@ -11,14 +15,14 @@ const professionals = [
     profesion: "Psicólogo Industrial",
     description: "Psicólogo especialista en la gestión del talento humano, con más de 3 años de experiencia, ha formado a 1000 colaboradores en: liderazgo, trabajo en equipo, gestión de emociones, seguridad en el trabajo y riesgos psicosociales. Destaca en dinámicas de equipos, capacitaciones lúdicas, gincanas y team building; imparte talleres para empresas e instituciones.",
     image: require("../assets/ALEX.png"),
-    className: "alexander" // Añade una clase específica
+    className: "alexander"
   },
   {
     name: "Ambar Vivas Villamarín",
     profesion: "Especialista en Terapia Cognitiva Conductual",
     description: "Psicóloga Clínica con 3 años de experiencia trabajando con terapia cognitivo conductual en casos de ansiedad, depresión, trastornos alimenticios, síndrome post COVID, adicciones, trastornos de conducta en niños y violencia intrafamiliar; ha ayudado a más de 300 personas. Además destaca en dinámicas creativas, intervenciones grupales, primeros auxilios psicológicos y terapia cognitiva conductual.",
     image: require("../assets/AMBAR.png"),
-    className: "" // Clase vacía para otras imágenes
+    className: ""
   },
 ];
 
@@ -49,11 +53,23 @@ const Nosotros = () => {
               </ul>
             </div>
             <div className="sm:w-1/2 mt-6 sm:mt-0 flex justify-center">
-              <img 
-                className="w-top h-95 object-cover rounded-lg shadow-md" 
-                src={paragraphImage} 
-                alt="GIRASALUD"
-              />
+              <Carousel
+                showThumbs={false}  // Oculta las miniaturas
+                autoPlay  // Activa la reproducción automática
+                infiniteLoop  // Hace que el carrusel vuelva a empezar al llegar al final
+                showStatus={false}  // Oculta el indicador de estado (1/3, 2/3, etc.)
+                dynamicHeight={true}  // Ajusta dinámicamente la altura del carrusel
+              >
+                <div>
+                  <img src={paragraphImage} alt="Girasalud Activity 1" className="object-cover rounded-lg shadow-md" />
+                </div>
+                <div>
+                  <img src={additionalImage1} alt="Girasalud Activity 2" className="object-cover rounded-lg shadow-md" />
+                </div>
+                <div>
+                  <img src={additionalImage2} alt="Girasalud Activity 3" className="object-cover rounded-lg shadow-md" />
+                </div>
+              </Carousel>
             </div>
           </div>
           <br></br>

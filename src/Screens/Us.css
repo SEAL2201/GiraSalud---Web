@@ -17,7 +17,7 @@
   width: 305px; /* Tamaño del contenedor redondo */
   height: 310px; /* Tamaño del contenedor redondo */
   border-radius: 50%;
-  background-color: #9CBC99;
+  background-color: #00A498;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .professional-image {
-  width: 75%;
+  width: 77%;
   height: 82%;
   /* object-fit: cover; Ajusta la imagen para cubrir el contenedor */
 }

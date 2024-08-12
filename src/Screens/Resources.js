@@ -8,25 +8,25 @@ const resources = [
     id: 1,
     title: "Kits de Habilidades para la Vida",
     icon: <GiToolbox color="#565B80" />, // Cambia el color aquí
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    content: "MUY PRONTO!",
   },
   {
     id: 2,
     title: "Manualidades Emocionales",
     icon: <GiCrafting color="#565B80" />, // Cambia el color aquí
-    content: "Praesent varius urna id elit tincidunt interdum.",
+    content: "MUY PRONTO!",
   },
   {
     id: 3,
     title: "Cuentos Infantiles",
     icon: <GiBookshelf color="#565B80" />, // Cambia el color aquí
-    content: "Nullam in mi nec lorem tempor eleifend ut nec arcu.",
+    content: "MUY PRONTO!",
   },
   {
     id: 4,
     title: "Cancionario",
     icon: <GiMusicalNotes color="#565B80" />, // Cambia el color aquí
-    content: "Vivamus consectetur justo sed erat maximus ultrices.",
+    content: "MUY PRONTO!",
   },
 ];
 

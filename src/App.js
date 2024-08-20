@@ -5,15 +5,9 @@ import Us from "./Screens/Us";
 import Resources from "./Screens/Resources";
 import Contact from "./Screens/Contact";
 import NavBar from "./Components/NavBar";
-import WhatsAppButton from "./Screens/WhatsAppButton"; 
-// import AtencionIndividual from "./Screens/AtencionIndividual"
-// import AtencionNinosAdolescentes from "./Screens/AtencionNinosAdolescentes"
-// import AtencionParaPadres from "./Screens/AtencionParaPadres";
-// import OrientacionVocacional from "./Screens/OrientacionVocacional"
-// import TerapiaDeParejas from "./Screens/TerapiaDePareja"
+import WhatsAppButton from "./Screens/WhatsAppButton";
 import './App.module.css';
-
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -24,13 +18,8 @@ function App() {
       <Us />
       <Resources />
       <Contact />
-      <WhatsAppButton /> 
-      {/* <AtencionIndividual />
-      <AtencionNinosAdolescentes/>
-      <AtencionParaPadres/>
-      <OrientacionVocacional/>
-      <TerapiaDeParejas/> */}
-
+      <WhatsAppButton />
+      <SpeedInsights />
     </div>
   );
 }

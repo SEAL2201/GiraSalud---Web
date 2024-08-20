@@ -1,3 +1,4 @@
+/* Contenedor general para la sección "Nosotros" */
 .howWeWork {
   display: flex;
   padding-top: 100px;
@@ -6,38 +7,64 @@
   background: linear-gradient(180deg, #1a1826, #413b5e);
 }
 
-.title {
-  font-size: 3em;
-  color: #f1f1f1;
-  font-weight: 400;
-  text-align: center;
-}
-
-.professional-image-container {
-  width: 305px; /* Tamaño del contenedor redondo */
-  height: 310px; /* Tamaño del contenedor redondo */
-  border-radius: 50%;
-  background-color: #00A498;
+/* Contenedor del contenido principal */
+.content-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative; /* Añade posición relativa para poder ajustar la imagen dentro */
+  flex-direction: row; /* Alinea el texto y el carrusel en fila */
+  align-items: stretch; /* Asegura que ambos elementos tengan la misma altura */
 }
 
-.professional-image {
-  width: 77%;
-  height: 82%;
-  /* object-fit: cover; Ajusta la imagen para cubrir el contenedor */
+/* Contenedor de texto */
+.text-container {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente */
+  padding: 0 20px; /* Espaciado horizontal */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  height: 100%; /* Asegura que la altura sea la misma que el carrusel */
+  color: #504a4a; /* Color del texto */
 }
 
-.professional-image.alexander {
-  transform: scale(1.2); /* Ajusta el tamaño de la imagen específica */
-  position: relative; /* Añade posición relativa */
-  left: -30px; /* Ajusta el valor para mover la imagen a la izquierda */
+/* Contenedor del carrusel */
+.carousel-container {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  display: flex;
+  align-items: center; /* Centra el carrusel verticalmente */
 }
 
+/* Estilos para el carrusel */
+.carousel .carousel-slider {
+  width: 100%;
+  height: 100%; /* Asegura que el carrusel ocupe el 100% de la altura disponible */
+}
+
+.carousel .carousel-slider .slide img {
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  width: 100%;
+  height: 100%; /* Mantiene la relación de aspecto de la imagen */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 640px) {
+  .content-container {
+    flex-direction: column; /* Cambia la dirección del flex a columna en pantallas móviles */
+  }
+
+  .text-container, .carousel-container {
+    flex: none; /* Permite que el texto y el carrusel ocupen el espacio completo en pantallas móviles */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .carousel-image {
+    max-height: 100px; /* Tamaño menor para pantallas pequeñas */
+    width: 100%;
+    height: auto;
+  }
+
+  .text-container {
+    font-size: 1.5rem; /* Tamaño de fuente mayor para pantallas pequeñas */
+  }
+}
 @font-face {
   font-family: 'Demo Regular';
   src: url('../assets/fonts/Daily Challenge DEMO.otf') format('truetype');

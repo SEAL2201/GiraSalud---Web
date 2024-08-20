@@ -3,10 +3,6 @@
   src: url('./assets/fonts/losta-masta-medium.ttf') format('truetype');
 }
 
-.fontFamily-MyFont1 {
-  font-family: 'MyFont1', sans-serif;
-}
-
 @font-face {
   font-family: 'MyFont2';
   src: url('./assets/fonts/moon-bold.otf') format('opentype');
@@ -20,7 +16,7 @@
 
 @font-face {
   font-family: 'MyFont3';
-  src: url('./assets/fonts/Daily\ Challenge\ DEMO.otf') format('opentype');
+  src: url('./assets/fonts/Daily Challenge DEMO.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -54,6 +50,9 @@
   background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
   color: white; /* Color del texto */
   transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el fondo y el tamaño */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados para el botón */
+  padding: 10px 20px; /* Espaciado interno */
 }
 
 .btnGradient:hover {
@@ -94,6 +93,11 @@
     font-size: 1rem;
   }
 }
+.fontFamily-MyFont1 {
+  font-family: 'MyFont', sans-serif; /* Ajusta la fuente si es necesario */
+  font-weight: normal; /* Asegúrate de que el peso de la fuente sea normal */
+}
+
 
 @media (max-width: 480px) {
   .App {
@@ -102,6 +106,7 @@
   
   nav {
     display: none; /* Ejemplo de ajuste para un menú colapsable */
+    position: fixed;
   }
   
   .serviceContainer {
@@ -113,4 +118,10 @@
     padding: 12px;
     font-size: 0.9rem;
   }
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

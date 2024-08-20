@@ -27,20 +27,53 @@
   padding-bottom: 80px;
 }
 
+/* Asegúrate de que el texto en los párrafos no esté en negritas */
 .services p {
   color: #f1f1f1;
   font-size: 1.5em;
   text-align: center;
   padding-bottom: 60px;
+  font-weight: normal; /* Añadido para evitar el formato en negritas */
 }
 
+/* Media Queries para pantallas medianas */
 @media (min-width: 800px) {
   .services p {
     font-size: 2.5em;
   }
+
   .webImage {
     width: 596px;
     height: 386px;
+  }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .services {
+    padding-top: 50px;
+  }
+
+  .serviceContainer {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .serviceTitle {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .webImage {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .services p {
+    font-size: 1.2em;
+    padding-bottom: 30px;
   }
 }
 
@@ -56,18 +89,19 @@
 .serviceDetailTitle {
   text-align: center;
 }
+
 .serviceDescriptionList {
   margin: 0;
   padding: 0;
-  list-style-type: none; /* Quita el estilo predeterminado de la lista */
+  list-style-type: none;
 }
 
 .serviceDescriptionList li {
   display: flex;
   align-items: center;
-  margin-bottom: 500x; /* Ajusta el espacio entre los elementos de la lista */
+  margin-bottom: 10px;
 }
 
 .serviceDescriptionList li span:first-child {
-  margin-right: 2px; /* Espacio entre el icono de girasol y el texto */
+  margin-right: 2px;
 }

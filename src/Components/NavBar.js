@@ -30,11 +30,10 @@ const NavBar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", detectDimension);
-    windowDimension.width > 800 && setNavBarOpen(false);
     return () => {
       window.removeEventListener("resize", detectDimension);
     };
-  }, [windowDimension]);
+  }, []);
 
   const links = [
     { id: 1, link: "Inicio" },
@@ -55,7 +54,7 @@ const NavBar = () => {
             rel="noopener noreferrer"
             className={styles.socialButton}
           >
-            <AiFillFacebook size={30} /> {/* Ajusta el tamaño a 30 */}
+            <AiFillFacebook size={30} />
           </a>
           <a
             href="https://www.instagram.com/girasalud_ec/?hl=es"
@@ -63,7 +62,7 @@ const NavBar = () => {
             rel="noopener noreferrer"
             className={styles.socialButton}
           >
-            <AiFillInstagram size={30} /> {/* Ajusta el tamaño a 30 */}
+            <AiFillInstagram size={30} />
           </a>
           <a
             href="https://www.tiktok.com/@girasaludec"
@@ -71,7 +70,7 @@ const NavBar = () => {
             rel="noopener noreferrer"
             className={styles.socialButton}
           >
-            <FaTiktok size={30} /> {/* Ajusta el tamaño a 30 */}
+            <FaTiktok size={30} />
           </a>
         </div>
         <div className={styles.contactInfo}>

@@ -124,12 +124,12 @@ const Services = () => {
     <div name="Servicios" className={styles.services}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <br></br>
-        <h2 className={`text-5xl font-extrabold text-gray-900 text-center ${styles['fontFamily-MyFont2']}`}>SERVICIOS</h2>
-        <br />
-        <p className={`text-4xl text-gray-600 text-center ${styles['fontFamily-MyFont1']}`}>
-          Somos GIRASALUD, un equipo de psicólogos que contribuye a la prevención y promoción de la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas. Es por ello que brindamos un espacio de salud mental lúdico y seguro donde puedes ser tú mismo.
-        </p>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className={`text-3xl md:text-5xl font-extrabold text-gray-900 text-center ${styles['fontFamily-MyFont2']}`}>SERVICIOS</h2>
+        <p className={`text-xl md:text-5xl text-gray-600 text-center ${styles['fontFamily-MyFont3']}`}>
+  Somos GIRASALUD, un equipo de psicólogos que contribuye a la prevención y promoción de la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas. Es por ello que brindamos un espacio de salud mental lúdico y seguro donde puedes ser tú mismo.
+</p>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Disclosure
               key={index}
@@ -140,19 +140,19 @@ const Services = () => {
             >
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`flex flex-col items-center w-full text-center text-3xl font-medium text-gray-900 focus:outline-none ${styles['fontFamily-MyFont2']}`}>
+                  <Disclosure.Button className={`flex flex-col items-center w-full text-center text-xl md:text-3xl font-medium text-gray-900 focus:outline-none ${styles['fontFamily-MyFont2']}`}>
                     <div className={styles.disclosureButtonContent}>
-                      <FontAwesomeIcon icon={service.icon} className="text-6xl mb-4" style={{ color: service.iconColor }} />
+                      <FontAwesomeIcon icon={service.icon} className="text-4xl md:text-6xl mb-4" style={{ color: service.iconColor }} />
                       <span className={styles.serviceTitle}>{service.title}</span>
                     </div>
                     <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-gray-500`} />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="pt-4 text-lg text-gray-600">
+                  <Disclosure.Panel className="pt-4 text-base md:text-lg text-gray-600">
                     <div className="flex flex-col space-y-4">
                       {service.details.map((detail, index) => (
                         <button
                           key={index}
-                          className={`bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-yellow-600 text-white text-4xl font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${styles['fontFamily-MyFont3']}`}
+                          className={`bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-yellow-600 text-white text-base md:text-lg font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${styles['fontFamily-MyFont3']}`}
                           onClick={() => handleButtonClick(detail)}
                         >
                           {detail.title}
@@ -169,17 +169,18 @@ const Services = () => {
         {/* Modal */}
         {selectedDetail && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 p-4">
-            <div className="bg-white rounded-lg shadow-lg w-full h-full max-w-4xl max-h-[90%] flex flex-col lg:flex-row">
+            <div className="bg-white rounded-lg shadow-lg w-full max-w-lg md:max-w-4xl max-h-[90%] flex flex-col md:flex-row overflow-hidden">
               {/* Imagen en el modal */}
-              <img src={selectedDetail.image} alt="Service" className="w-full lg:w-1/2 h-auto object-cover" />
-              <div className="w-full lg:w-1/2 p-6 overflow-y-auto">
-              <br></br>
-              <br></br>
-                <h2 className="text-6xl text-center font-bold mb-4">{selectedDetail.title}</h2>
-                <p className="text-2xl text-gray-700 mb-4"><strong>Descripción:</strong> {selectedDetail.description}</p>
-                <p className="text-2xl text-gray-700 mb-4"><strong>Importancia:</strong> {selectedDetail.Importance}</p>
+              <div className="flex-shrink-0 w-full md:w-1/3 h-64 md:h-auto">
+                <img src={selectedDetail.image} alt="Service" className="w-full h-full object-cover" />
+              </div>
+              {/* Contenido del modal */}
+              <div className="flex-1 p-4 md:p-6 overflow-y-auto">
+                <h2 className="text-2xl md:text-4xl font-bold mb-4">{selectedDetail.title}</h2>
+                <p className="text-base md:text-lg text-gray-700 mb-4"><strong>Descripción:</strong> {selectedDetail.description}</p>
+                <p className="text-base md:text-lg text-gray-700 mb-4"><strong>Importancia:</strong> {selectedDetail.Importance}</p>
                 {selectedDetail.Benefits && (
-                  <div className="text-2xl text-center text-gray-700 mb-4">
+                  <div className="text-base md:text-lg text-gray-700 mb-4">
                     <strong>Beneficios:</strong>
                     <ul className="list-disc list-inside mt-2">
                       {selectedDetail.Benefits.map((benefit, index) => (

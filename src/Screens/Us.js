@@ -12,14 +12,14 @@ import styles from '../App.module.css';
 const professionals = [
   {
     name: "Alexander Azuero Galarza",
-    profession: "Psicólogo especialista",
+    profession: "Psicólogo Industrial Master en Dirección y Gestión de Recursos Humanos",
     description: "Psicólogo especialista en la gestión del talento humano, con más de 3 años de experiencia. Ha formado a 1000 colaboradores en liderazgo, trabajo en equipo, gestión de emociones, seguridad en el trabajo, y riesgos psicosociales. Destaca en dinámicas de equipos, capacitaciones lúdicas, gincanas, y team building; imparte talleres para empresas e instituciones.",
     image: require("../assets/ALEX.png"),
     className: "alexander"
   },
   {
     name: "Ambar Vivas Villamarín",
-    profession: "Psicóloga clínica",
+    profession: "Especialista en Terapia Cognitiva Conductual - Psicóloga Clínica",
     description: "Psicóloga clínica con 3 años de experiencia trabajando en terapia cognitivo conductual en casos de ansiedad, depresión, trastornos alimenticios, síndrome post COVID, adicciones, trastornos de conducta en niños, y violencia intrafamiliar. Ha ayudado a más de 300 personas y destaca en dinámicas creativas, intervenciones grupales, primeros auxilios psicológicos, y terapia cognitivo conductual.",
     image: require("../assets/AMBAR.png"),
     className: "ambar"

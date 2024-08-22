@@ -1,28 +1,21 @@
 import React from "react";
-import contactImage from "../assets/LogoFormulario.jpg";
+import contactImage from "../assets/LogoFormulario.png";
 import styles from '../App.module.css';
 
 const Contact = () => {
   return (
     <div name="Contact" className="flex justify-center items-center min-h-screen bg-gray-100 py-6 md:py-12 px-4 md:px-8">
-      <div className="w-full max-w-full mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="flex flex-col md:flex-row">
-          {/* Imagen en dispositivos móviles */}
-          <div className="block md:hidden w-full flex justify-center items-center p-4">
+      <div className="w-full max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <div className="flex flex-col md:flex-row">  {/* flex-col para móviles, flex-row para pantallas grandes */}
+          {/* Imagen en dispositivos grandes */}
+          <div className="w-full md:w-1/2 flex justify-center items-center p-4">
             <img
-              className="object-contain w-90 h-80" // Ajusta el tamaño aquí
+              className="object-contain w-full h-auto" // La imagen se ajusta sin recortarse
               src={contactImage}
               alt="Contáctanos"
             />
           </div>
-          {/* Imagen en pantallas grandes */}
-          <div className="hidden md:block md:w-1/2 flex justify-center items-center p-4 md:p-0">
-            <img
-              className="object-cover w-300 h-300"
-              src={contactImage}
-              alt="Contáctanos"
-            />
-          </div>
+          {/* Contenedor del formulario */}
           <div className="p-4 md:p-8 flex-1">
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-6 text-center md:text-left">
               Contáctanos

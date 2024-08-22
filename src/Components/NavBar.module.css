@@ -149,14 +149,34 @@
 }
 
 .contactButton {
-  background: linear-gradient(135deg, #3FB2A9 0%, #00A498 100%);
-  /* border: 2px solid black; */
-  color: black;
+  background: linear-gradient(135deg, #3FB2A9 0%, #00A498 100%); /* Gradiente inicial */
+  color: #fff;
   padding: 10px 20px;
-  font-size: 18px; /* Tamaño de fuente ajustado */
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Agrega transición para la transformación */
 }
+
+
+.contactButton:hover {
+  background: linear-gradient(45deg, #00A498, #3FB2A9); /* Gradiente en hover */
+  transform: scale(1.1); /* Escala al 110% de su tamaño original */
+}
+
+
+.socialButton {
+  color: #f1f1f1; /* Color inicial del ícono */
+  transition: color 0.3s ease-in-out; /* Animación suave */
+}
+
+
+.socialButton:hover {
+  color: #3FB2A9; /* Cambia este color al que prefieras */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+}
+
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {

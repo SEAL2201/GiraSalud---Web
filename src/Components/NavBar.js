@@ -12,7 +12,7 @@ import {
 import { FaTiktok } from "react-icons/fa";
 import styles from "./NavBar.module.css";
 import { useScrollPosition } from "../Hooks/scrollPosition";
-import logo from "../assets/logo1.jpeg";
+import logo from "../assets/logoNavBar.png";
 
 const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);

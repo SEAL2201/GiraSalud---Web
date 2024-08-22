@@ -4,14 +4,15 @@
 }
 
 .topBar {
-  background-color: #f6921e;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
+  background-color: #f6921e; /* Color de fondo naranja */
+  color: white; /* Color del texto */
+  display: flex; /* Utiliza Flexbox para organizar los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  padding: 10px 20px; /* Espaciado interno */
+  position: fixed; /* Fija la barra en la parte superior */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
 .socialIcons {
@@ -35,7 +36,6 @@
   align-items: center;
   padding: 10px 20px;
 }
-
 
 /* Estilos cuando se hace scroll */
 .NavBarcontactContainerOnScroll {
@@ -159,44 +159,38 @@
   transition: background 0.3s ease, transform 0.3s ease; /* Agrega transición para la transformación */
 }
 
-
 .contactButton:hover {
   background: linear-gradient(45deg, #00A498, #3FB2A9); /* Gradiente en hover */
   transform: scale(1.1); /* Escala al 110% de su tamaño original */
 }
-
 
 .socialButton {
   color: #f1f1f1; /* Color inicial del ícono */
   transition: color 0.3s ease-in-out; /* Animación suave */
 }
 
-
 .socialButton:hover {
   color: #3FB2A9; /* Cambia este color al que prefieras */
   transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
 }
 
-
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
   .topBar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  .socialIcons {
-    margin-top: 10px; /* Espacio superior en dispositivos móviles */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 15px; /* Ajusta el padding para dispositivos móviles */
   }
 
   .contactInfo {
-    font-size: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    justify-content: space-between;
-    flex-direction: row;
+    display: none; /* Oculta la información de contacto en dispositivos móviles */
+  }
+
+  .socialIcons {
+    width: 100%; /* Asegura que ocupe todo el ancho en móviles */
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    margin-top: -4px; /* Espacio superior en dispositivos móviles */
+    gap: 10px; /* Aumenta el espacio entre íconos para mejor separación */
   }
 
   .navBar {

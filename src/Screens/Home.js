@@ -19,7 +19,7 @@ const Home = () => {
       >
         <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image1})` }}>
           <div className="flex flex-col justify-center items-left h-full bg-black bg-opacity-50 p-2">
-            <div className="text-left text-white space-y-4">
+            <div className="text-left text-white space-y-1"> {/* Ajustado aquí */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold animate-pulse">GIRASALUD</h1>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse">EL PODER DE ELEGIR</h1>
             </div>
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
         <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image2})` }}>
           <div className="flex flex-col justify-center items-left h-full bg-black bg-opacity-50 p-2">
-            <div className="text-left text-white space-y-4">
+            <div className="text-left text-white space-y-0"> {/* Ajustado aquí */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold animate-pulse">GIRASALUD</h1>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse">EL PODER DE ELEGIR</h1>
             </div>
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image3})` }}>
           <div className="flex flex-col justify-center items-left h-full bg-black bg-opacity-50 p-2">
-            <div className="text-left text-white space-y-4">
+            <div className="text-left text-white space-y-0"> {/* Ajustado aquí */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold animate-pulse">GIRASALUD</h1>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse">EL PODER DE ELEGIR</h1>
             </div>
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
         <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image4})` }}>
           <div className="flex flex-col justify-center items-left h-full bg-black bg-opacity-50 p-2">
-            <div className="text-left text-white space-y-4">
+            <div className="text-left text-white space-y-0"> {/* Ajustado aquí */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold animate-pulse">GIRASALUD</h1>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse">EL PODER DE ELEGIR</h1>
             </div>

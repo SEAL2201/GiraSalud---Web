@@ -124,10 +124,11 @@ const Services = () => {
     <div name="Servicios" className={styles.services}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <br></br>
-        <h2 className={`text-3xl md:text-5xl font-extrabold text-gray-900 text-center ${styles['fontFamily-MyFont2']}`}>SERVICIOS</h2>
-        <p className={`text-xl md:text-5xl text-gray-600 text-center ${styles['fontFamily-MyFont3']}`}>
-  Somos GIRASALUD, un equipo de psicólogos que contribuye a la prevención y promoción de la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas. Es por ello que brindamos un espacio de salud mental lúdico y seguro donde puedes ser tú mismo.
-</p>
+        <br></br>
+        <h2 className={`text-3xl md:text-5xl font-extrabold text-gray-900 text-center ${styles['fontFamily-MyFont2']}`}>SERVICIOS</h2><br></br>
+        <p className={`text-xl md:text-4xl text-gray-600 text-center ${styles['fontFamily-MyFont4']}`}>
+          Somos GIRASALUD, un equipo de psicólogos que contribuye a la prevención y promoción de la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas. Es por ello que brindamos un espacio de salud mental lúdico y seguro donde puedes ser tú mismo.
+        </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -152,7 +153,7 @@ const Services = () => {
                       {service.details.map((detail, index) => (
                         <button
                           key={index}
-                          className={`bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-yellow-600 text-white text-base md:text-lg font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${styles['fontFamily-MyFont3']}`}
+                          className={`bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-yellow-600 text-white text-base md:text-3xl font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${styles['fontFamily-MyFont3']}`}
                           onClick={() => handleButtonClick(detail)}
                         >
                           {detail.title}
@@ -169,13 +170,13 @@ const Services = () => {
         {/* Modal */}
         {selectedDetail && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 p-4">
-            <div className="bg-white rounded-lg shadow-lg w-full max-w-lg md:max-w-4xl max-h-[90%] flex flex-col md:flex-row overflow-hidden">
+            <div className="bg-white rounded-lg shadow-lg w-full max-w-lg md:max-w-4xl max-h-[71%] flex flex-col md:flex-row overflow-hidden">
               {/* Imagen en el modal */}
               <div className="flex-shrink-0 w-full md:w-1/3 h-64 md:h-auto">
                 <img src={selectedDetail.image} alt="Service" className="w-full h-full object-cover" />
               </div>
               {/* Contenido del modal */}
-              <div className="flex-1 p-4 md:p-6 overflow-y-auto">
+              <div className={`flex-1 p-4 md:p-6 overflow-y-auto ${styles['fontFamily-MyFont4']}`}>
                 <h2 className="text-2xl md:text-4xl font-bold mb-4">{selectedDetail.title}</h2>
                 <p className="text-base md:text-lg text-gray-700 mb-4"><strong>Descripción:</strong> {selectedDetail.description}</p>
                 <p className="text-base md:text-lg text-gray-700 mb-4"><strong>Importancia:</strong> {selectedDetail.Importance}</p>

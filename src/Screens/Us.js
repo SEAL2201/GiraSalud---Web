@@ -3,8 +3,9 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import background1 from '../assets/background1.jpg';
 import paragraphImage from '../assets/IMG_0134.jpg';
-import additionalImage1 from '../assets/IMG_0136.jpg';
-import additionalImage2 from '../assets/IMG_0135.jpg';
+import paragraphImage1 from '../assets/IMG_0222.jpg';
+import paragraphImage2 from '../assets/IMG_0171.jpg';
+import paragraphImage3 from '../assets/IMG_0207.jpg';
 import girasolIcon from '../assets/girasol.png';
 import './Us.css'; 
 import styles from '../App.module.css';
@@ -47,9 +48,9 @@ const Nosotros = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="content-container">
             {/* Contenedor de texto */}
-            <div className="text-container">
+            <div className={`text-container ${styles['fontFamily-MyFont4']}`}>
               <ul className="list-disc pl-6">
-                <div className="mb-4 text-3xl lg:text-5xl xl:text-3xl">
+                <div className="mb-2 text-3xl lg:text-4xl xl:text-3xl">
                   Somos Girasalud, un equipo de psicólogos que promociona la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas.
                 </div>
                 <br></br>
@@ -82,10 +83,13 @@ const Nosotros = () => {
                     <img src={paragraphImage} alt="Girasalud Activity 1" className="object-cover w-full h-full" />
                   </div>
                   <div className="flex justify-center items-center h-full">
-                    <img src={additionalImage1} alt="Girasalud Activity 2" className="object-cover w-full h-full" />
+                    <img src={paragraphImage1} alt="Girasalud Activity 2" className="object-cover w-full h-full" />
                   </div>
                   <div className="flex justify-center items-center h-full">
-                    <img src={additionalImage2} alt="Girasalud Activity 3" className="object-cover w-full h-full" />
+                    <img src={paragraphImage2} alt="Girasalud Activity 3" className="object-cover w-full h-full" />
+                  </div>
+                  <div className="flex justify-center items-center h-full">
+                    <img src={paragraphImage3} alt="Girasalud Activity 4" className="object-cover w-full h-full" />
                   </div>
                 </Carousel>
               </div>
@@ -110,15 +114,15 @@ const Nosotros = () => {
                     alt={professional.name}
                   />
                   <div className="text-center mt-4">
-                  <div className="professional-info py-2 px-4 rounded-full bg-[#3FB2A9] text-white">
+                  <div className={`professional-info py-2 px-4 rounded-full bg-[#3FB2A9] text-white ${styles['fontFamily-MyFont4']}`}>
                     <h3 className="text-lg font-bold">{professional.name}</h3>
                     <p className="text-sm">{professional.profession}</p>
                   </div>
                 </div>
                 </div>
                 
-                <div className="mt-4 sm:mt-0 sm:ml-8 text-lg sm:text-xl text-gray-500 w-full">
-                  <p className={`${styles['fontFamily-MyFont3']}`}>
+                <div className="mt-4 sm:mt-0 sm:ml-8 text-lg sm:text-2xl text-gray-500 w-full">
+                  <p className={`${styles['fontFamily-MyFont4']}`}>
                     {professional.description}
                   </p>
                 </div>

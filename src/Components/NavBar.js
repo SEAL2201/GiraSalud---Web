@@ -73,15 +73,15 @@ const NavBar = () => {
             <FaTiktok size={30} />
           </a>
         </div>
-        <div className={styles.contactInfo}>
-          <AiTwotonePhone size={20} />
-          <span>0960120939</span>
-          <AiTwotoneMail size={20} />
-          <span>GiraSalud@gmail.com</span>
-          <AiTwotoneEnvironment size={20} />
-          <span>C. Belisario Quevedo 4-43, Latacunga 050104</span>
+            <div className={styles.contactInfo}>
+            <AiTwotonePhone size={20} />
+            <span className={styles.phoneNumber}>0960120939</span>
+            <AiTwotoneMail size={20} />
+            <span className={styles.emailAddress}>GiraSalud@gmail.com</span>
+            <AiTwotoneEnvironment size={20} />
+            <span className={styles.addressInfo}>C. Belisario Quevedo 4-43, Latacunga 050104</span>
+          </div>
         </div>
-      </div>
       <div
         className={
           navBarOpen

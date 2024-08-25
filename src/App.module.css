@@ -10,6 +10,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFont4';
+  src: url('./assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('truetype');
+}
+
+.fontFamily-MyFont4 {
+  font-family: 'MyFont4', sans-serif;
+}
+
 .fontFamily-MyFont2 {
   font-family: 'MyFont2', sans-serif;
 }

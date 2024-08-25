@@ -4,20 +4,20 @@
 }
 
 .topBar {
-  background-color: #f6921e; /* Color de fondo naranja */
-  color: white; /* Color del texto */
-  display: flex; /* Utiliza Flexbox para organizar los elementos */
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
-  padding: 10px 20px; /* Espaciado interno */
-  position: fixed; /* Fija la barra en la parte superior */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #f6921e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  align-items: center;
 }
 
 .socialIcons {
   display: flex;
-  gap: 10px; /* Espacio entre íconos */
+  gap: 10px;
 }
 
 .contactInfo {
@@ -27,9 +27,22 @@
   gap: 10px;
 }
 
+/* Estilos específicos para cada parte de la información de contacto */
+.phoneNumber {
+  font-family: 'YourPhoneNumberFont', sans-serif;
+}
+
+.emailAddress {
+  font-family: 'YourEmailFont', sans-serif;
+}
+
+.addressInfo {
+  font-family: 'YourAddressFont', sans-serif;
+}
+
 /* Estilos para el contenedor naranja de información de contacto */
 .NavBarcontactContainer {
-  background-color: #f6921e; /* Color naranja */
+  background-color: #f6921e;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -37,54 +50,50 @@
   padding: 10px 20px;
 }
 
-/* Estilos cuando se hace scroll */
 .NavBarcontactContainerOnScroll {
-  background-color: rgba(246, 146, 30, 0.9); /* Fondo con opacidad al hacer scroll */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  background-color: rgba(246, 146, 30, 0.9);
+  transition: background-color 0.3s ease;
 }
 
-/* NavBar principal */
 .navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: white;
-  position: fixed; /* Fija el NavBar en la pantalla */
-  top: 50px; /* Ajusta el espacio para que no se solape con el contenedor naranja */
-  width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilo para el NavBar flotante (cuando está abierto) */
 .navOpen {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  position: fixed; /* Fija el NavBar en la pantalla */
-  width: 25%; /* Asegura que ocupe todo el ancho de la ventana */
-  height: auto; /* Ajusta la altura automáticamente */
-  top: 50px; /* Ajusta el espacio para que no se solape con el contenedor naranja */
-  right: 0; /* Asegura que esté alineado a la izquierda */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  border-radius: 8px; /* Bordes redondeados opcionales */
-  padding: 10px; /* Ajusta el padding según sea necesario */
+  position: fixed;
+  width: 25%;
+  height: auto;
+  top: 50px;
+  right: 0;
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-/* Estilo cuando el NavBar está en scroll */
 .navOnScroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo con opacidad para la nav bar cuando se hace scroll */
-  position: fixed; /* Fija el NavBar en la pantalla */
-  top: 50px; /* Ajusta el espacio para que no se solape con el contenedor naranja */
-  width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .logoContainer {
@@ -93,7 +102,7 @@
 }
 
 .logo {
-  width: 100px; /* Ajusta el tamaño del logo aquí */
+  width: 100px;
   height: auto;
 }
 
@@ -111,23 +120,22 @@
 
 .linksContainer {
   display: flex;
-  /* Muestra los enlaces en una fila horizontal */
   flex-direction: row;
-  gap: 15px; /* Espacio entre los enlaces */
+  gap: 15px;
   align-items: center;
 }
 
 .navLink {
   color: black;
   text-decoration: none;
-  font-size: 18px; /* Tamaño de fuente ajustado */
+  font-size: 18px;
 }
 
 .navButton {
   background-color: transparent;
   border: none;
   color: black;
-  font-size: 24px; /* Tamaño de fuente ajustado */
+  font-size: 24px;
   cursor: pointer;
   padding: 5px 10px;
   text-align: center;
@@ -140,7 +148,6 @@
 
 .border {
   height: 2px;
-  /* background-color: black; */
 }
 
 .contactLinkContainer {
@@ -149,48 +156,48 @@
 }
 
 .contactButton {
-  background: linear-gradient(135deg, #3FB2A9 0%, #00A498 100%); /* Gradiente inicial */
+  background: linear-gradient(135deg, #3FB2A9 0%, #00A498 100%);
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease; /* Agrega transición para la transformación */
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contactButton:hover {
-  background: linear-gradient(45deg, #00A498, #3FB2A9); /* Gradiente en hover */
-  transform: scale(1.1); /* Escala al 110% de su tamaño original */
+  background: linear-gradient(45deg, #00A498, #3FB2A9);
+  transform: scale(1.1);
 }
 
 .socialButton {
-  color: #f1f1f1; /* Color inicial del ícono */
-  transition: color 0.3s ease-in-out; /* Animación suave */
+  color: #f1f1f1;
+  transition: color 0.3s ease-in-out;
 }
 
 .socialButton:hover {
-  color: #3FB2A9; /* Cambia este color al que prefieras */
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+  color: #3FB2A9;
+  transform: scale(1.1);
 }
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
   .topBar {
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-    padding: 15px; /* Ajusta el padding para dispositivos móviles */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
   }
 
   .contactInfo {
-    display: none; /* Oculta la información de contacto en dispositivos móviles */
+    display: none;
   }
 
   .socialIcons {
-    width: 100%; /* Asegura que ocupe todo el ancho en móviles */
-    justify-content: flex-start; /* Alinea los íconos a la izquierda */
-    margin-top: -4px; /* Espacio superior en dispositivos móviles */
-    gap: 10px; /* Aumenta el espacio entre íconos para mejor separación */
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: -4px;
+    gap: 10px;
   }
 
   .navBar {
@@ -213,7 +220,7 @@
   }
 
   .logo {
-    width: 150px; /* Ajusta el tamaño del logo en móviles */
+    width: 150px;
   }
 
   .linksContainer {
@@ -223,14 +230,14 @@
   }
 
   .navLink {
-    font-size: 24px; /* Ajusta el tamaño de fuente en móviles */
+    font-size: 24px;
     padding: 10px 0;
     width: 100%;
     text-align: left;
   }
 
   .navButton {
-    font-size: 28px; /* Ajusta el tamaño del botón en móviles */
+    font-size: 28px;
   }
 
   .contactButton {

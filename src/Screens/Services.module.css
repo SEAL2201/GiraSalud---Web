@@ -36,6 +36,11 @@
   font-weight: normal; /* Añadido para evitar el formato en negritas */
 }
 
+.modal img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Media Queries para pantallas medianas */
 @media (min-width: 800px) {
   .services p {
@@ -50,6 +55,10 @@
 
 /* Media Queries para pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
+  .modal img {
+    max-height: 50vh; /* Limita la altura de la imagen en móviles */
+  }
+  
   .services {
     padding-top: 50px;
   }

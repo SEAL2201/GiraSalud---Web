@@ -11,27 +11,32 @@
 }
 
 @font-face {
-  font-family: 'MyFont4';
-  src: url('./assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('truetype');
-}
-
-.fontFamily-MyFont4 {
-  font-family: 'MyFont4', sans-serif;
-}
-
-.fontFamily-MyFont2 {
-  font-family: 'MyFont2', sans-serif;
-}
-
-@font-face {
   font-family: 'MyFont3';
   src: url('./assets/fonts/Daily Challenge DEMO.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFont4';
+  src: url('./assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('truetype');
+}
+
+.fontFamily-MyFont1 {
+  font-family: 'MyFont', sans-serif; /* Ajusta la fuente si es necesario */
+  font-weight: normal; /* Asegúrate de que el peso de la fuente sea normal */
+}
+
+.fontFamily-MyFont2 {
+  font-family: 'MyFont2', sans-serif;
+}
+
 .fontFamily-MyFont3 {
   font-family: 'MyFont3', sans-serif;
+}
+
+.fontFamily-MyFont4 {
+  font-family: 'MyFont4', sans-serif;
 }
 
 .serviceTitle {
@@ -69,6 +74,45 @@
   transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
 }
 
+.pageBackground {
+  background-color: #eeb741;
+}
+
+.titleColor {
+  color: #f28e1e;
+}
+
+.additionalButton {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.iconContainer {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
 /* Estilos responsivos */
 
 .App {
@@ -78,6 +122,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .mobile-contact-container {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -94,6 +144,7 @@
   .serviceContainer {
     padding: 10px;
     margin: 10px 0;
+    background-color: white;
   }
   
   .btnGradient {
@@ -102,11 +153,6 @@
     font-size: 1rem;
   }
 }
-.fontFamily-MyFont1 {
-  font-family: 'MyFont', sans-serif; /* Ajusta la fuente si es necesario */
-  font-weight: normal; /* Asegúrate de que el peso de la fuente sea normal */
-}
-
 
 @media (max-width: 480px) {
   .App {
@@ -133,4 +179,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.inputBackground {
+  background-color: #cbc5b9;
+}
+
+.modal {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

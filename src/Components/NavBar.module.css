@@ -1,16 +1,51 @@
 /* Estilos generales */
-.navBarContainer {
-  width: 100%;
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('../assets/fonts/moon-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFont3';
+  src: url('../assets/fonts/Daily Challenge DEMO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFont4';
+  src: url('../assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('truetype');
+}
+
+.fontFamily-MyFont4 {
+  font-family: 'MyFont4', sans-serif;
+}
+
+.fontFamily-MyFont2 {
+  font-family: 'MyFont2', sans-serif;
+}
+
+.fontFamily-MyFont3 {
+  font-family: 'MyFont3', sans-serif;
+}
+
+.navBarContainer {
+  width: 100%;
+  position: relative;
+  z-index: 10; /* Menor z-index para permitir que otros elementos se superpongan */
+}
+
+/* Barra superior con información de contacto y redes sociales */
 .topBar {
-  background-color: #f6921e;
-  color: white;
+  background-color: #eee8db;
+  color: #93836a;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0px 10px;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   width: 100%;
   align-items: center;
 }
@@ -24,7 +59,17 @@
   font-size: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+}
+
+.contactInfo div {
+  display: flex;
+  align-items: center;
+  gap: 1px; /* Espacio entre el ícono y el texto */
+}
+
+.phoneNumber, .emailAddress, .addressInfo {
+  margin-left: 5px; /* Espacio entre el ícono y el texto */
 }
 
 /* Estilos específicos para cada parte de la información de contacto */
@@ -64,7 +109,7 @@
   position: fixed;
   top: 50px;
   width: 100%;
-  z-index: 1000;
+  z-index: 10; /* Reducido para permitir superposición */
   transition: background-color 0.3s ease;
 }
 
@@ -78,7 +123,7 @@
   height: auto;
   top: 50px;
   right: 0;
-  z-index: 1000;
+  z-index: 20; /* Reducido para permitir superposición */
   border-radius: 8px;
   padding: 10px;
 }
@@ -92,7 +137,7 @@
   position: fixed;
   top: 50px;
   width: 100%;
-  z-index: 1000;
+  z-index: 10; /* Reducido para permitir superposición */
   transition: background-color 0.3s ease;
 }
 
@@ -102,7 +147,7 @@
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 
@@ -128,14 +173,14 @@
 .navLink {
   color: black;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
-
+ 
 .navButton {
   background-color: transparent;
   border: none;
   color: black;
-  font-size: 24px;
+  font-size: 25px;
   cursor: pointer;
   padding: 5px 10px;
   text-align: center;
@@ -161,7 +206,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -172,8 +217,18 @@
 }
 
 .socialButton {
-  color: #f1f1f1;
+  color: #93836a;
   transition: color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Tamaño del contenedor circular */
+  height: 50px; /* Tamaño del contenedor circular */
+  border-radius: 50%; /* Hacer el contenedor circular */
+  background-color: #f0f0f0; /* Color de fondo del contenedor */
+  text-align: center;
+  font-size: 30px; /* Tamaño del ícono */
+  cursor: pointer;
 }
 
 .socialButton:hover {
@@ -186,7 +241,7 @@
   .topBar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
+    padding: 9px;
   }
 
   .contactInfo {
@@ -204,6 +259,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
+    z-index: 10; /* Reducido para permitir superposición */
+    position: relative;
   }
 
   .NavBarcontactContainer {
@@ -237,7 +294,7 @@
   }
 
   .navButton {
-    font-size: 28px;
+    font-size: 15px;
   }
 
   .contactButton {

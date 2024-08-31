@@ -1,10 +1,13 @@
+/* WhatsAppButton.css */
+
+/* Estilos generales del botón */
 .whatsapp-button {
   position: fixed;
   width: 60px; /* Tamaño del botón */
   height: 60px; /* Tamaño del botón */
   bottom: 50px;
   right: 40px;
-  background-color: #25d366;
+  background-color: rgba(37, 211, 102, 0.7); /* Color de fondo con transparencia */
   color: #fff;
   border-radius: 50%; /* Asegura que el botón siga siendo circular */
   display: flex;
@@ -14,6 +17,7 @@
   font-size: 30px; /* Tamaño de fuente del ícono */
   box-shadow: 2px 2px 3px #999;
   z-index: 1000;
+  transition: background-color 0.3s; /* Transición para el color de fondo */
 }
 
 .whatsapp-button i {
@@ -27,4 +31,31 @@
 
 .whatsapp-button:hover i {
   transform: rotate(20deg);
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    width: 50px; /* Tamaño del botón en pantallas pequeñas */
+    height: 50px; /* Tamaño del botón en pantallas pequeñas */
+    font-size: 20px; /* Tamaño del ícono en pantallas pequeñas */
+    background-color: rgba(37, 211, 102, 0.7); /* Color de fondo con transparencia en pantallas pequeñas */
+  }
+  
+  .whatsapp-button:active {
+    background-color: rgba(37, 211, 102, 1); /* Color de fondo sólido al pulsar en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    width: 40px; /* Tamaño del botón en pantallas muy pequeñas */
+    height: 40px; /* Tamaño del botón en pantallas muy pequeñas */
+    font-size: 16px; /* Tamaño del ícono en pantallas muy pequeñas */
+    background-color: rgba(37, 211, 102, 0.7); /* Color de fondo con transparencia en pantallas muy pequeñas */
+  }
+  
+  .whatsapp-button:active {
+    background-color: rgba(37, 211, 102, 1); /* Color de fondo sólido al pulsar en pantallas muy pequeñas */
+  }
 }

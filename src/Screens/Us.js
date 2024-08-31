@@ -20,7 +20,7 @@ const professionals = [
   },
   {
     name: "Ambar Vivas Villamarín",
-    profession: "Especialista en Terapia Cognitiva Conductual - Psicóloga Clínica",
+    profession: "PSICÓLOGA CLÍNICA ESPECIALISTA EN TERAPIA COGNITIVO CONDUCTUAL",
     description: "Psicóloga clínica con 3 años de experiencia trabajando en terapia cognitivo conductual en casos de ansiedad, depresión, trastornos alimenticios, síndrome post COVID, adicciones, trastornos de conducta en niños, y violencia intrafamiliar. Ha ayudado a más de 300 personas y destaca en dinámicas creativas, intervenciones grupales, primeros auxilios psicológicos, y terapia cognitivo conductual.",
     image: require("../assets/AMBAR.png"),
     className: "ambar"
@@ -30,7 +30,6 @@ const professionals = [
 const Nosotros = () => {
   return (
     <div name="Nosotros">
-      {/* Sección del fondo */}
       <div className="relative bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: `url(${background1})` }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
@@ -43,13 +42,14 @@ const Nosotros = () => {
         </div>
       </div>
       
-      {/* Sección del contenido */}
-      <div className="bg-white py-12">
+      <div className="bg-[#f28e1e] py-12"> 
+        <h2 className={`text-3xl sm:text-4xl md:text-7xl font-extrabold text-[#eeb741] text-center mb-8 ${styles['fontFamily-MyFont2']}`}>
+          Nosotros
+        </h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="content-container">
-            {/* Contenedor de texto */}
             <div className={`text-container ${styles['fontFamily-MyFont4']}`}>
-              <ul className="list-disc pl-6">
+              <ul className="list-disc pl-6 text-white">
                 <div className="mb-2 text-3xl lg:text-4xl xl:text-3xl">
                   Somos Girasalud, un equipo de psicólogos que promociona la salud mental por medio de actividades artísticas con material lúdico y terapias psicológicas.
                 </div>
@@ -58,18 +58,17 @@ const Nosotros = () => {
                   <img src={girasolIcon} alt="Girasol" className="inline-block w-8 h-8 sm:w-10 sm:h-10 mx-2"/>
                   En Girasalud, empoderamos a los padres de hijos con dificultades emocionales y de conducta con el objetivo de mejorar su salud mental y calidad de vida.
                 </li>
-                <li className="mb-4 text-3xl  lg:text-4xl xl:text-3xl">
+                <li className="mb-4 text-3xl lg:text-4xl xl:text-3xl">
                   <img src={girasolIcon} alt="Girasol" className="inline-block w-8 h-8 sm:w-10 sm:h-10 mx-2"/>
                   Contribuimos en la prevención y promoción de la salud mental por medio de actividades artísticas con material lúdico; y tratamos el malestar emocional a través de la terapia psicológica.
                 </li>
-                <li className="mb-4 text-3xl  lg:text-4xl xl:text-3xl">
+                <li className="mb-4 text-3xl lg:text-4xl xl:text-3xl">
                   <img src={girasolIcon} alt="Girasol" className="inline-block w-8 h-8 sm:w-10 sm:h-10 mx-2"/>
                   Ser reconocidos como un espacio de salud mental artístico en la ciudad de Latacunga.
                 </li>
               </ul>
             </div>
             
-            {/* Contenedor del carrusel */}
             <div className="carousel-container">
               <div className="carousel-container relative w-full overflow-hidden">
                 <Carousel
@@ -96,33 +95,30 @@ const Nosotros = () => {
             </div>
           </div>
           
-          {/* Sección del equipo */}
           <br></br>
-          <h2 className={`text-2xl md:text-4xl font-extrabold text-gray-900 text-center ${styles['fontFamily-MyFont2']}`}>Equipo de GiraSalud</h2>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <br></br>
+          <h2 className={`text-2xl md:text-7xl font-extrabold text-center ${styles['fontFamily-MyFont2']}`} style={{ color: '#eeb741' }}>
+            Equipo de GiraSalud
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-8">
             {professionals.map((professional, index) => (
               <div
                 key={index}
-                className={`professional-container bg-white shadow-lg rounded-xl p-6 flex flex-col items-center sm:flex-row transform transition-transform duration-500 hover:scale-105 ${
-                  index % 2 === 0 ? "bg-[#EFEFEF]" : "bg-[#F9F9F9]"
+                className={`professional-container rounded-xl p-6 flex flex-col sm:flex-row items-center transform transition-transform duration-500 hover:scale-105 ${
+                  index % 2 === 1 ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
                 <div className="professional-image-container">
                   <img
-                    className="professional-image w-45 h-45 sm:w-45 sm:h-45"
+                    className="professional-image"
                     src={professional.image}
                     alt={professional.name}
                   />
-                  <div className="text-center mt-4">
-                  <div className={`professional-info py-2 px-4 rounded-full bg-[#3FB2A9] text-white ${styles['fontFamily-MyFont4']}`}>
-                    <h3 className="text-lg font-bold">{professional.name}</h3>
-                    <p className="text-sm">{professional.profession}</p>
-                  </div>
                 </div>
-                </div>
-                
-                <div className="mt-4 sm:mt-0 sm:ml-8 text-lg sm:text-2xl text-gray-500 w-full">
-                  <p className={`${styles['fontFamily-MyFont4']}`}>
+                <div className="professional-info-container">
+                  <h3 className="text-2xl lg:text-2xl">{professional.name}</h3>
+                  <p className="text-2xl lg:text-3xl mt-3 mb-4 uppercase">{professional.profession}</p> 
+                  <p className={`${styles['fontFamily-MyFont4']} mt-7 text-lg lg:text-2xl`}>
                     {professional.description}
                   </p>
                 </div>

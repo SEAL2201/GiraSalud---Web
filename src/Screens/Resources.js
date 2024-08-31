@@ -59,9 +59,9 @@ const Resources = () => {
   };
 
   return (
-    <div name="Semillero" className="bg-gray-100 py-12 min-h-screen flex items-center justify-center">
+    <div name="Semillero" className="bg-[#00a093] py-12 min-h-screen flex items-center justify-center">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-8 ${styles['fontFamily-MyFont2']}`}>
+        <h2 className={`text-3xl sm:text-4xl md:text-7xl font-extrabold text-[#eeb741] text-center mb-8 ${styles['fontFamily-MyFont2']}`}>
           Semillero
         </h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -76,10 +76,10 @@ const Resources = () => {
               <div className="text-4xl sm:text-5xl md:text-6xl mb-4">
                 {resource.icon}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{resource.title}</h3>
+              <h3 className={`text-xl sm:text-2xl font-bold text-gray-900 mb-2 ${styles['fontFamily-MyFont2']}`}>{resource.title}</h3>
               <button
                 onClick={() => openDetails(resource)}
-                className="mt-4 bg-[#565B80] hover:bg-[#4a5070] text-white py-2 px-4 rounded transition-colors"
+                className={`mt-4 bg-[#565B80] hover:bg-[#4a5070] text-white py-2 px-4 rounded transition-colors ${styles['fontFamily-MyFont2']}`}
               >
                 Ver detalles
               </button>
@@ -90,7 +90,7 @@ const Resources = () => {
         {selectedResource && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
             <div className="bg-white p-6 sm:p-8 rounded-lg max-w-3xl mx-4 w-full">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{selectedResource.title}</h2>
+              <h2 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-4 ${styles['fontFamily-MyFont2']}`}>{selectedResource.title}</h2>
               <div className="text-2xl sm:text-4xl text-[#565B80] mb-4">
                 {selectedResource.icon}
               </div>
@@ -104,7 +104,7 @@ const Resources = () => {
                         href={cuento.file}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-500 text-white py-3 px-5 rounded-lg shadow-md hover:bg-blue-600 transition-colors transform hover:scale-105"
+                        className={`bg-blue-500 text-white py-3 px-5 rounded-lg shadow-md hover:bg-blue-600 transition-colors transform hover:scale-105 ${styles['fontFamily-MyFont4']}`}
                       >
                         {cuento.title}
                       </a>
@@ -115,7 +115,7 @@ const Resources = () => {
                 <p className="text-gray-700">{selectedResource.content}</p>
               )}
 
-              <button onClick={closeDetails} className="mt-4 bg-[#565B80] hover:bg-[#4a5070] text-white py-2 px-4 rounded transition-colors">
+              <button onClick={closeDetails} className={`mt-4 bg-[#565B80] hover:bg-[#4a5070] text-white py-2 px-4 rounded transition-colors ${styles['fontFamily-MyFont2']}`}>
                 Cerrar
               </button>
             </div>

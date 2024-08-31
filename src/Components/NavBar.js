@@ -47,6 +47,20 @@ const NavBar = () => {
   return (
     <div className={styles.navBarContainer}>
       <div className={styles.topBar}>
+        <div className={styles.contactInfo}>
+          <div>
+            <AiTwotoneEnvironment size={35} />
+            <span className={styles.addressInfo}>Belisario Quevedo 4-43<br></br>y Tarqui, Latacunga</span>
+          </div>
+          &nbsp;&nbsp;&nbsp;
+          <div>
+            <AiTwotonePhone size={35} />
+            <span className={styles.phoneNumber}>+593 96 012 0939 <br></br> +593 98 796 9440</span>
+          </div>
+          &nbsp;&nbsp;&nbsp;
+          <AiTwotoneMail size={35} />
+          <span className={styles.emailAddress}>girasaludec@gmail.com</span>
+        </div>
         <div className={styles.socialIcons}>
           <a
             href="https://www.facebook.com/profile.php?id=100066695102480"
@@ -73,15 +87,7 @@ const NavBar = () => {
             <FaTiktok size={30} />
           </a>
         </div>
-            <div className={styles.contactInfo}>
-            <AiTwotonePhone size={20} />
-            <span className={styles.phoneNumber}>0960120939</span>
-            <AiTwotoneMail size={20} />
-            <span className={styles.emailAddress}>GiraSalud@gmail.com</span>
-            <AiTwotoneEnvironment size={20} />
-            <span className={styles.addressInfo}>C. Belisario Quevedo 4-43, Latacunga 050104</span>
-          </div>
-        </div>
+      </div>
       <div
         className={
           navBarOpen
@@ -118,7 +124,7 @@ const NavBar = () => {
                   to={link}
                   smooth
                   duration={500}
-                  className={styles.navLink}
+                  className={`${styles.navLink} ${styles['fontFamily-MyFont2']}`}
                 >
                   <button className={styles.navButton}>{link}</button>
                 </Link>
@@ -137,7 +143,7 @@ const NavBar = () => {
                     to={link}
                     smooth
                     duration={500}
-                    className={styles.navLink}
+                    className={`${styles.navLink} ${styles['fontFamily-MyFont2']}`}
                   >
                     <button className={styles.navButton}>{link}</button>
                   </Link>
@@ -151,9 +157,9 @@ const NavBar = () => {
                 to="Contact"
                 smooth
                 duration={500}
-                className={styles.contactLink}
+                className={`${styles.contactLink} ${styles['fontFamily-MyFont2']}`}
               >
-                <button className={styles.contactButton}>Contáctanos</button>
+                <button className={styles.contactButton}>Reserva tu cita <br />ahora mismo</button>
               </Link>
             </div>
           </>
